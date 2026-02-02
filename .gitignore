@@ -1,0 +1,75 @@
+# --- Android ---
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# DEX (Dalvik Executable)
+*.dex
+
+# Java class files
+*.class
+
+# Generated files (빌드 결과물)
+bin/
+gen/
+out/
+release/
+build/
+.gradle/
+var/
+
+# Android Studio Navigation Editor temp files
+.navigation/
+
+# Android Studio captures folder
+captures/
+
+# External native build folder (NDK 사용 시)
+.externalNativeBuild
+.cxx/
+
+# --- Kotlin & Modern Android ---
+# Kotlin 2.0 이상 컴파일러 캐시 [web:22]
+.kotlin/
+
+# KSP (Kotlin Symbol Processing) generated files
+build/generated/ksp/
+
+# --- IntelliJ / Android Studio IDE ---
+# 개인별 설정 파일들이므로 공유하지 않는 것을 권장합니다 [web:20]
+*.iml
+.idea/modules.xml
+.idea/libraries/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/gradle.xml
+.idea/assetWizardSettings.xml
+.idea/dictionaries
+.idea/caches
+.idea/navEditor.xml
+.idea/compiler.xml
+.idea/misc.xml
+
+# 주의: 팀 내 코드 스타일 공유가 필요하다면 아래 항목은 제외(주석 처리)하세요
+# .idea/codeStyles/
+# .idea/inspectionProfiles/
+
+# --- Local Configuration (절대 커밋 금지) ---
+# SDK 경로 및 개인 설정이 포함됨
+local.properties
+
+# --- Sensitive Information (보안) ---
+# 키스토어 파일 및 구글 서비스 JSON (배포용 키는 절대 커밋하면 안 됩니다)
+*.jks
+*.keystore
+google-services.json
+key.properties
+secrets.properties
+
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
