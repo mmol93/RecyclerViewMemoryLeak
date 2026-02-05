@@ -10,7 +10,7 @@ material = "1.13.0"
 
 recyclerview = "1.4.0"
 navigation = "2.9.7"
-leakcanary = "2.14"
+leakcanary = "3.0-alpha-8"
 constraintlayout = "2.2.1"
 activityKtx = "1.12.3"
 lifecycle = "2.10.0"
