@@ -46,8 +46,10 @@ class FirstFragment : Fragment() {
     }
 
     override fun onDestroyView() {
+        // 使わないadapterは無効にする
+        binding.recyclerView.adapter = null
+
         super.onDestroyView()
-        // binding.recyclerView.adapter = null  // ← 누수 재현을 위해 일부러 주석
         _binding = null
     }
 }

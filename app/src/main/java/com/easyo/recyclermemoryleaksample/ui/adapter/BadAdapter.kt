@@ -17,7 +17,7 @@ class BadRecyclerAdapter(
     }
 
     override fun onBindViewHolder(holder: BadViewHolder, position: Int) {
-        holder.bind(getItem(position), position)
+        holder.bind(getItem(position))
     }
 }
 
@@ -25,14 +25,17 @@ class BadViewHolder(
     private val binding: ItemSampleBinding,
     private val onItemClicked: (Int) -> Unit
 ) : RecyclerView.ViewHolder(binding.root) {
-
-    fun bind(text: String, pos: Int) {
-        binding.textView.text = text
-
-        // set lambda for every new viewHolder
+    init {
+        // Lambdaを最初一回のみセットするよう変更
         binding.root.setOnClickListener {
-            onItemClicked(pos)
+            if (bindingAdapterPosition != RecyclerView.NO_POSITION) {
+                onItemClicked(bindingAdapterPosition)
+            }
         }
+    }
+
+    fun bind(text: String) {
+        binding.textView.text = text
     }
 }
 
